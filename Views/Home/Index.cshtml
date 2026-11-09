@@ -1,0 +1,6 @@
+@model List<ApiEvent>
+@{ViewData["Title"]="Discover RaceDay";}
+<section class="hero mb-4"><span class="badge text-bg-warning mb-3">RACE SEASON IS ON</span><h1 class="display-5">Find your next finish line.</h1><p class="lead text-white-50">Discover running, walking and cycling events. Choose your challenge and make race day yours.</p><a class="btn btn-warning fw-bold me-2" asp-controller="Account" asp-action="Register">Join RaceDay</a><a class="btn btn-outline-light" href="#events">Explore events</a></section>
+<div class="d-flex justify-content-between align-items-center mb-3" id="events"><div><h2 class="section-title">Upcoming events</h2><p class="muted mb-0">Find an event worth getting up for.</p></div></div>
+@if(ViewBag.ApiError!=null){<div class="alert alert-warning">@ViewBag.ApiError</div>}
+<div class="row g-3">@foreach(var e in Model){<div class="col-md-6 col-lg-4"><div class="card h-100"><div class="card-body"><span class="badge text-bg-primary mb-2">@e.EventType</span><h5 class="fw-bold">@e.Name</h5><p class="muted mb-2">📍 @e.Location, @e.Province</p><p>@e.EventDate.ToString("dd MMM yyyy · HH:mm")</p><p class="text-secondary">@e.Description</p><a class="btn btn-dark" asp-controller="Account" asp-action="Login">Sign in to view & enrol</a></div></div></div>}</div>

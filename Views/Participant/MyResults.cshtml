@@ -1,0 +1,3 @@
+@model List<ApiResult>
+@{ViewData["Title"]="My results";}
+<h1 class="section-title">My race results</h1><p class="muted">Your personal race history and finishing achievements.</p><div class="card"><div class="table-responsive"><table class="table mb-0"><thead><tr><th>Event</th><th>Category</th><th>Finish time</th><th>Position</th><th>Status</th></tr></thead><tbody>@foreach(var r in Model){<tr><td>@r.EventName</td><td>@r.CategoryName</td><td>@(r.FinishTime?.ToString()??"—")</td><td>@(r.Position?.ToString()??"—")</td><td><span class="status status-@r.Status.ToLower()">@r.Status</span></td></tr>}</tbody></table></div></div>

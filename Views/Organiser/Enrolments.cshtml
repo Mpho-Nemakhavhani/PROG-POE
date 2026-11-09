@@ -1,0 +1,3 @@
+@model List<ApiEnrolment>
+@{ViewData["Title"]="Event enrolments";}
+<h1 class="section-title">Event enrolments</h1><div class="card"><div class="table-responsive"><table class="table mb-0"><thead><tr><th>Participant</th><th>Email</th><th>Category</th><th>Race number</th><th>Status</th></tr></thead><tbody>@foreach(var e in Model){<tr><td>@e.ParticipantName</td><td>@e.ParticipantEmail</td><td>@e.CategoryName</td><td>@e.RaceNumber</td><td><span class="status status-@e.Status.ToLower()">@e.Status</span></td></tr>}</tbody></table></div></div>
