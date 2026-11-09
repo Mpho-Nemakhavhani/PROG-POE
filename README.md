@@ -1,4 +1,7 @@
-# PROG-POE
-<img width="1920" height="866" alt="Screenshot (345)" src="https://github.com/user-attachments/assets/abc3fc73-0590-4047-909a-cfb429d60b69" />
-YouTube link: https://youtu.be/TZwJFVBiqJg
-part 3 video: https://youtu.be/o_HZFuJczOI 
+# RaceDay
+
+This repository contains the Part 2 RaceDay API and the Part 3 ASP.NET Core MVC frontend.
+
+See [README-PART3-DRAFT.md](README-PART3-DRAFT.md) for setup, Docker instructions, architecture, outstanding Azure Blob Storage work, and the final submission checklist.
+
+**Important:** this is an implementation draft, not a verified ready-to-submit assessment. Complete the outstanding requirements and run the full solution locally before submission.
